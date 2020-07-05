@@ -1,0 +1,533 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+html,body{
+	height: 100%;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.clear{
+	clear: both;
+}
+
+header{
+	width: 100%;
+	height: 90vh; /*90% com base no tamanho da tela, não tem herança de outra div*/
+	min-height: 700px;
+	padding: 40px 2%;
+	background-size: cover;
+	background-image: url('../img/capa.png');
+	font-weight: 500;
+	font-style: italic;
+	background-attachment: fixed;
+}
+
+header nav{
+	float: right;
+}
+
+header .logo{
+	float: left;
+	width: 160px;
+	height: 40px;
+	margin-left: 5%;
+	background-color: #ccc;
+	text-align: center;
+}
+
+header nav.desktop-menu ul{
+	list-style-type: none;
+}
+
+header nav.desktop-menu ul li{
+	float: left; /*para ficar um ao lado do outro*/
+	padding: 0 20px;
+}
+
+header nav.desktop-menu ul li a{
+	color: white;
+	text-decoration: none;  /*não aparecer linha embaixo do link*/
+}
+
+nav.mobile-menu{
+	display: none;
+	background-image: url('../img/botao-de-menu.png');
+	background-size: 100% 100%;
+	width: 35px;
+	height: 35px;
+	cursor:pointer;
+}
+
+nav.mobile-menu ul{
+	background-color: white;
+	position: absolute;
+	width: 100%;
+	top: 80px;
+	left: 0;              /*para não sair do container*/
+	list-style-type: none;
+	text-align: center;
+	display: none;
+}
+
+nav.mobile-menu ul li{
+	border: 1px solid #ccc;
+	padding: 10px 0;
+	border-collapse: collapse;
+}
+
+nav.mobile-menu ul li a{
+	text-decoration:none;
+}
+
+nav.mobile-menu:hover ul{ /*só para exemplificar, será feito em javascript*/
+	display: block;
+}
+
+.chamada1{
+	float: right;
+	max-width: 600px;
+	margin:140px 150px;
+}
+
+.chamada1 h2{
+	font-size: 40px;
+	font-weight: 900; /*mudando a font de h2*/
+	color: white;
+}
+
+.chamada1 p{
+	font-size: 18px;
+	color:white;
+	margin-top: 10px; 
+}
+
+.section1{
+	background-color: #472562;
+	width: 100%;
+	padding: 0px 2%;
+	height: 400px;
+	font-style: italic;
+}
+
+.section1 .container{
+	max-width: 1000px;
+}
+
+.text-section1{
+	float: left;
+	color: white;
+	width: 50%; 
+	margin-top: 70px;
+	/*padding-left: 20px;  se usar margim vai dá quebra de float*/
+	
+	/*para que o texto entre no float da imagem, para colidir sem que a imagem dê quebra de linha */
+	position: relative;
+	left: 45px;
+}
+
+.text-section1 h2{
+	font-weight: 500;
+	font-size: 26px;
+}
+
+.text-section1 p{
+	margin-top: 20px;
+	font-size:20px;
+}
+
+.text-section1 ul{
+	list-style-position: inside;
+	font-size: 20px;
+}
+
+.text-section1 ul li{
+	float: left;
+	margin-top: 8px;
+	width: 100%;
+	font-size: 18px;
+}
+
+.botao1{
+	background-color: #FF703D;
+	width: 165px;
+	height: 44px;
+	color: white;
+	cursor: pointer;
+	margin-top: 30px; 
+	border-radius: 30px;
+	text-align: center;
+	line-height: 44px; /*centralizar na vertical*/
+}
+
+.device-section1{
+	float: left;
+	width: 50%;
+	position: relative;
+	top:-30px;
+	height: 430px;
+	background-image: url('../img/device.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%; /*melhor adaptação que cover no responsivo*/
+}
+
+section.section2{
+	padding-right: 2%;
+	padding-left: 2%;
+	text-align:center;
+	max-height: 600px;
+}
+
+section.section2 h2{
+	color: #472562;
+	margin-top: 60px;
+}
+
+section.section2 p{
+	color: #472562;
+	margin-top: 13px;
+	max-width: 700px;
+	line-height: 25px;
+	display: inline-block; /*para que ele centralize, já que o block que é padrão deixa a direita*/
+}
+
+section.section2 img{
+	width: 45%;
+	position: relative;
+	bottom: -70px;
+}
+
+/**fim section2**/
+
+/*aqui é o inicio da section3*/
+
+section.section3{
+	width: 100%;
+
+}
+
+section.section3 .time{
+	float: left;
+	background-color: #472562;
+	width: 50%;
+	height: 450px;  /*usar heght auto para o responsivo*/
+	padding: 120px 5%;
+}
+
+section.section3 .time h2{
+	font-weight: 500;
+	font-style: italic;
+	color: white;
+	font-size: 30px;
+}
+
+section.section3 .time p{
+	font-style: italic;
+	color: white;
+	font-size: 18px;
+	margin-top: 38px;
+	line-height: 25px;
+}
+
+section.section3 .autor{
+	float: right;
+	background-color: white;
+	width: 50%;
+	height: 450px;
+	padding: 120px 5%;
+	text-align: right;
+	border:1px solid  #472562;
+	border-bottom: none;
+}
+
+section.section3 .autor h2{
+	font-weight: 500;
+	font-style: italic;
+	color: #472562;
+	font-size: 30px;
+}
+section.section3 .autor h3{
+	color: rgba(70, 36, 97,0.6);
+	font-weight: 400;
+}
+
+section.section3 .autor p{
+	font-style: italic;
+	color: #472562;
+	font-size: 18px;
+	margin-top: 15px;
+	line-height: 25px;
+}
+
+.slider-bullets{
+	float: left;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.slider-bullets span{
+	float: right;
+	border-radius: 8px;
+	width: 16px;
+	height: 16px;
+	background-color:rgba(70, 36, 97,0.8) ;
+	margin-left: 8px;
+	cursor: pointer;
+}
+
+/**fim section3**/
+
+/*aqui é o inicio section4*/
+
+section.section4{
+	background-color: rgba(70, 36, 97,0.6) ;
+	padding: 100px 0;
+	height: auto;
+}
+
+section.section4 .form{
+	float: left;
+	width: 50%;
+	padding-left: 10px;
+}
+
+section.section4  .form h2{
+	font-weight: 500;
+	font-style: italic;
+}
+
+section.section4  .form p{
+	font-style: italic;
+	font-size: 15px;
+	max-width: 400px;
+	margin-top: 15px;
+	margin-bottom: 8px;
+	padding-right: 10px;
+}
+
+section.section4  .form form input[type=text]{
+	width: 80%;
+	height: 50px;
+	padding-left: 15px;
+	margin-bottom: 8px;
+	border: 1px solid rgb(200,200,200)
+}
+
+section.section4  .form form textarea{
+	width: 80%;
+	padding: 15px;
+	height: 160px;
+	border: 1px solid rgb(200,200,200)
+}
+
+section.section4 .form form input[type=submit]{
+	background-color: #ff591f;
+	width: 180px;
+	height: 44px;
+	color: white;
+	cursor: pointer;
+	margin-top: 30px; 
+	border:none;
+	border-radius: 30px;
+	font-size: 18px;
+	line-height: 44px; /*centralizar na vertical*/
+	
+}
+
+.map{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 1px solid rgb(200,200,200);
+	background-color:white;
+
+}
+
+.map-wraper{
+	float: right;
+	width: 50%;
+	color: white;
+	padding: 0 10px;
+}
+
+.map-wraper h2{
+	font-weight: 500;
+	font-style: italic;
+	color: black;
+}
+.map-wraper3{
+	margin-top: 10px;
+	width: 100%;
+	max-width: 480px;
+	position: relative;
+}
+
+.map-wraper2{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding-top: 100%;
+}
+
+/**fim section4**/
+
+/*footer*/
+
+footer{
+	padding:40px 0;
+	background:#472562;
+	color: white;
+}
+
+footer p{
+	font-size: 14px;
+}
+footer p:nth-of-type(1){
+	float: left;
+}
+
+footer p:nth-of-type(2){
+	float: right;
+}
+
+@media screen and (max-width: 980px){
+	.chamada1{
+		float: right;
+		margin:65px 50px;
+	}
+}
+
+@media screen and (max-width: 850px){
+	.device-section1{
+		display: none;
+	}
+	section.section1 {
+		padding: 40px 2%;
+		height: auto;
+		text-align: center;
+	}
+	.text-section1{
+		width: 100%;
+		margin-top: 0;
+		position: static;
+		float: none;
+		display: inline-block;
+		padding-left: 0; 
+	}
+
+	.text-section1 ul{
+		display: inline-block;
+	}
+
+	.text-section1 ul li{
+		float: none;
+		text-align: left;
+	}
+	.botao1{
+		display: inline-block;
+	}
+
+	section.section4 .container{
+		text-align: center;
+	}
+
+	section.section4 .form{
+		float: none;
+		width: 100%;
+	}
+
+	section.section4 p{
+		display: inline-block;
+	}
+
+	.map-wraper{
+		float: none;
+		width: 100%;
+		padding:0 4%;
+		margin-top: 50px;
+	}
+
+	.map-wraper3{
+		display: inline-block;
+		margin-top: 10px;
+		width: 80%;
+		padding-top: 80%;
+		max-width: none;
+		position: relative;
+	}
+
+	.map-wraper2{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 90%;
+		padding-top: 0;
+	}
+}
+
+@media screen and (max-width: 768px){
+	header{
+		width: 100%;
+		height: auto;
+		min-height: 80vh;
+	}
+
+	.chamada1{
+		margin:100px 0;
+		float: none;
+		text-align: center;
+	}
+	.chamada1 h2{
+		font-size: 30px;
+	}
+
+	.chamada1 p{
+		font-size: 15px;
+	}
+
+	nav.desktop-menu{
+		display: none;
+	}
+
+	nav.mobile-menu{
+		display: block;
+	}
+}
+
+ @media screen and (max-width: 690px){
+ 	section.section3 .time{
+ 		float: none;
+ 		width: 100%;
+ 		padding-bottom:60px;
+ 		height: auto;
+ 	}
+ 	section.section3 .autor{
+ 		float: none;
+ 		width: 100%;
+ 		padding-top:60px;
+ 		height: auto;
+ 	}
+
+ 	footer{
+		text-align: center;
+	}
+
+	footer p:nth-of-type(1){
+		float: none;
+	}
+
+	footer p:nth-of-type(2){
+		float: none;
+	}
+ }
